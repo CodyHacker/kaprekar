@@ -1,0 +1,12 @@
+def kaprekar?(k)
+  squared = k ** 2
+  squared_str = squared.to_s
+  str_len = squared_str.length
+  n = str_len / 2
+  left = squared_str[0,n].to_i
+  right = squared_str[n..-1].to_i
+  return k == left + right
+end
+
+puts kaprekar?(45)
+
